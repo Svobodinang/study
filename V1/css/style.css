@@ -11,7 +11,7 @@ body{
 	background: #000;
 	/*ширина блока*/
 	width: 100%;
-	/*выравнивание вдль главной оси(горизонт)*/
+	/*выравнивание вдоль главной оси(горизонт)*/
 	display: flex;
 	/*выравнивание блоков по центру*/
 	justify-content: center;
@@ -26,7 +26,7 @@ body{
 nav{
 	margin: auto;
 	width: 800px;
-	height: 100px;
+	height: 50px;
 }
  .topnav{
 	background-color: #ffff;
@@ -41,6 +41,7 @@ nav{
 	text-align: center;
 	/*14-сверху, 16-слева справа*/
 	padding: 14px 16px;
+	/*размер*/
 	font-size: 15px;
 	text-decoration: none;
 } 
@@ -53,6 +54,80 @@ nav{
 	/*скрыть иконку*/
 	display: none;
 }
+
+.mw-100{
+	max-width: 100%;
+}
+.advntages__conteiner{
+	display: flex;
+	/*расположили блок по центру*/
+	justify-content: center;
+}
+.advanteges{
+	padding-top: 40px;
+	/*отступ снизу*/
+	padding-bottom: 40px;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	/*переност строки*/
+	flex-wrap: wrap;
+}
+.adventeges__item{
+	width: 30%;
+}
+footer{
+	width: 100%;
+	height: auto;
+	background: black;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 25px; 
+}
+footer p{
+	color:white;
+}
+footer a{
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	/*отступ слева*/
+	margin-left: 10px;
+}
+footer nav a:hover{
+	border-bottom: 1px solid white;
+
+}
+.social img{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.social img:hover{
+	background: #4949;
+	/*убрать квадрат вокруг круглой иконки*/
+	border-radius: 50%;
+}
+.gallery{
+	width: 40%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.photo-item{
+	width: 25%;
+}
+.photo-item img{
+	box-sizing: border-box;
+	max-width: 100%;
+	opacity: 0.7;
+}
+.photo-item img:hover{
+	opacity: 1;
+}
+
+
 /*адаптивность сайта, для экрана монитора с максимальной шириной 768*/
 @media screen and (max-width: 768){
 	/*для всех, кроме первого элемента(home)*/
@@ -88,5 +163,17 @@ nav{
 		float: none;
 		display: block;
 		text-align: left;		
+	}
+	.adventeges__item{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 420){
+	.advanteges{
+		/*расположим исконки в колонку*/
+		flex-direction: column;
+	}
+		.adventeges__item{
+		width: 100%;
 	}
 }
