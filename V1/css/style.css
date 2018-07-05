@@ -326,16 +326,17 @@ textarea{
 	width: 50%;
 	margin: 0 auto;
 	margin-bottom: 50px;
-	text-align: center;
 }
 .about__container img{
 	max-width: 100%;
 }
-.services__container{
-	display: grid;
-	/*добавляет колонки*/
-	grid-template-columns: auto auto;
+.services__container__block{
+	display: flex;
+	flex-wrap: wrap;
+
+	max-width: 500px;
 }
+
 
 /*адаптивность сайта, для экрана монитора с максимальной шириной 768*/
 @media screen and (max-width: 768){
